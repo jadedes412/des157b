@@ -4,8 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DES157B SPRING 2026</title>
+
+    <!-- Normalize CSS for browser compatability -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Add link to any google fonts used here -->
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Livvic:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+
+    <!-- My Styles -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- Meta tag for mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- My Script -->
+    <script src="script.js" defer></script>
+
 </head>
 <body>
-    <h1>DES 157B</h1>
+
+    <div id="container">
+    <main>
+ 
+      <!-- TOP BAR -->
+      <div class="top-bar">
+        <div class="mode-control">
+          <p class="mode-label-awake">you're on <strong>awake</strong> mode</p>
+          <p class="mode-label-sleep">you're on <strong>sleep</strong> mode</p>
+          <!-- Single button — awake image shown by default, sleep image shown in sleep mode -->
+          <button class="switch-btn" id="switchBtn" aria-label="Toggle sleep/awake mode">
+            <img class="switch-img-awake" src="switch-awake.png" alt="awake switch" />
+            <img class="switch-img-sleep" src="switch-sleepy.png" alt="sleep switch" />
+          </button>
+        </div>
+      </div>
+ 
+      <!-- HERO -->
+      <div class="hero">
+ 
+        <!-- Title + celestial -->
+        <div class="hero-left">
+          <div class="welcome-text">welcome to</div>
+          <div class="clouds">
+            <img class="cloud-img cloud-img-awake" src="cloud-awake.png" alt="" />
+            <img class="cloud-img cloud-img-sleep" src="cloud-sleep.png" alt="" />
+            <div class="title-row">
+              <div class="big-title">JADE'S HOMEPAGE</div>
+              <div class="celestial-wrap">
+                <img class="sun" src="sun-awake.png" alt="sun" />
+                <img class="moon" src="moon-sleep.png" alt="moon" />
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Cat on the right -->
+        <div class="cat-container">
+          <img class="cat-awake" src="cat-awake.png" alt="awake cat" />
+          <img class="cat-sleep" src="cat-sleepy.png" alt="sleeping cat" />
+        </div>
+ 
+      </div>
+ 
+      <!-- SUBTITLE -->
+      <div class="subtitle">DES 157B - Interactive Media III - SPRING 2026 - Section 001</div>
+ 
+      <!-- SECTIONS GRID -->
+      <div class="sections-grid">
+ 
+        <div class="section-card">
+          <div class="section-tab">
+            <span class="section-tab-label">Ministudios</span>
+          </div>
+          <div class="section-content">
+            <a class="section-link" href="#">Blockbuster Video</a>
+            <a class="section-link" href="#">Check Yourself</a>
+          </div>
+        </div>
+ 
+        <div class="section-card">
+          <div class="section-tab">
+            <span class="section-tab-label">Research</span>
+          </div>
+          <div class="section-content">
+            <a class="section-link" href="#">Brainstorm</a>
+            <a class="section-link" href="#">Comparative Analysis</a>
+            <a class="section-link" href="#">Annotated Bibliography</a>
+            <a class="section-link" href="#">Feasibility Report</a>
+            <a class="section-link" href="#">Usability Results</a>
+          </div>
+        </div>
+ 
+        <div class="section-card">
+          <div class="section-tab">
+            <span class="section-tab-label">Development</span>
+          </div>
+          <div class="section-content">
+            <a class="section-link" href="#">Proposal</a>
+            <a class="section-link" href="#">Sketches</a>
+            <a class="section-link" href="#">User Flows</a>
+            <a class="section-link" href="#">Design Progress</a>
+            <a class="section-link" href="#">LoFi Sketches</a>
+            <a class="section-link" href="#">Version 1</a>
+            <a class="section-link" href="#">Usability Test</a>
+            <a class="section-link" href="#">Version 2</a>
+          </div>
+        </div>
+ 
+        <div class="section-card">
+          <div class="section-tab">
+            <span class="section-tab-label">Capstone</span>
+          </div>
+          <div class="section-content">
+            <a class="section-link" href="#">Case Study</a>
+            <a class="section-link" href="#">Project</a>
+          </div>
+        </div>
+ 
+      </div>
+ 
+    </main>
+  </div>
 </body>
 </html>
+
