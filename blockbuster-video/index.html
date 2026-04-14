@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leaf poem video</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Livvic:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <link href="styles.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- main section -->
+<section id="hero">
+  <h1>the leaf poem</h1>
+  <img class="hero-leaf" src="images/leaf-color.png" alt="leaf">
+  <div class="scroll-hint">
+    <span>scroll down to explore</span>
+    <span class="arrow">↓</span>
+  </div>
+</section>
+ 
+<!-- side section -->
+<nav id="chapter-dots">
+  <div class="dot active" data-chapter="0"></div>
+  <div class="dot" data-chapter="1"></div>
+  <div class="dot" data-chapter="2"></div>
+  <div class="dot" data-chapter="3"></div>
+</nav>
+ 
+<!-- video section -->
+<section id="video-section">
+  <div id="video-sticky">
+    <div class="video-frame" id="video-frame">
+ 
+      <!-- leaf toggle button -->
+      <button id="leaf-toggle">
+        <img id="leaf-toggle-img" src="images/leaf-gray.png" alt="leaf gray">
+      </button>
+ 
+      <!-- videos -->
+      <video class="leaf-video active" id="leaf-video-1" src="media/leaf-video-1.webm" loop muted playsinline></video>
+      <video class="leaf-video" id="leaf-video-2" src="media/leaf-video-2.webm" loop muted playsinline></video>
+      <video class="leaf-video" id="leaf-video-3" src="media/leaf-video-3.webm" loop muted playsinline></video>
+      <video class="leaf-video" id="leaf-video-4" src="media/leaf-video-4.webm" loop muted playsinline></video>
+ 
+      <!-- placeholder for videos -->
+      <div class="video-placeholder active" id="ph-1">leaf-video-1</div>
+      <div class="video-placeholder" id="ph-2">leaf-video-2</div>
+      <div class="video-placeholder" id="ph-3">leaf-video-3</div>
+      <div class="video-placeholder" id="ph-4">leaf-video-4</div>
+ 
+      <!-- text overlay poem -->
+      <div id="overlay-text">
+        <p id="overlay-paragraph"></p>
+      </div>
+ 
+    </div>
+  </div>
+</section>
+</body>
+</html>
