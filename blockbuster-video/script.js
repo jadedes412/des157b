@@ -105,7 +105,7 @@
 
     if (scrolled < 0) return; // above section
 
-    const progress = Math.min(scrolled / sectionHeight, 1); // 0 → 1
+    const progress = Math.min(scrolled / sectionHeight, 1); //
     const chapter  = Math.min(Math.floor(progress * 4), 3);
 
     switchChapter(chapter);
