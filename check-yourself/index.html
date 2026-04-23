@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check yourself</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<body>
+
+  <header class="header">
+    <h1>
+      a timeline of<br>
+      all the <span class="red">netflix documentaries</span><br>
+      i've watched in the past <span class="red">year:</span>
+    </h1>
+  </header>
+
+  <div class="timeline-wrap">
+    <!-- row 1: cover stacks -->
+    <div class="grid-13" id="rowCovers"></div>
+
+    <!-- row 2: rail + dots -->
+    <div class="grid-13 row-rail" id="rowRail"></div>
+
+    <!-- row 3: labels -->
+    <div class="grid-13" id="rowLabels"></div>
+  </div>
+
+  <!-- OVERLAY -->
+  <div class="ov-bg" id="ovBg">
+    <div class="ov-shell">
+      <button class="ov-arrow" id="aPrev">&#8249;</button>
+      <div class="ov-card">
+        <button class="ov-x" id="ovX">&#x2715;</button>
+        <div class="ov-img"   id="ovImg"></div>
+        <div class="ov-tags"  id="ovTags"></div>
+        <div class="ov-title" id="ovTitle"></div>
+        <div class="ov-sub"   id="ovSub"></div>
+        <div class="ov-year"  id="ovYear"></div>
+        <div class="ov-desc"  id="ovDesc"></div>
+        <div class="ov-count" id="ovCount"></div>
+      </div>
+      <button class="ov-arrow" id="aNext">&#8250;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
