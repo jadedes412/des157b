@@ -1,14 +1,4 @@
-/* ── TOKENS ── */
-:root {
-  --red: #E50914;
-  --black: #0a0a0a;
-  --off-white: #f5f5f0;
-  --gray-mid: #aaaaaa;
-  --gray-dark: #555555;
-  --col-count: 13;
-}
-
-/* ── RESET ── */
+/* RESET */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -17,69 +7,72 @@
 
 html, body {
   height: 100%;
+  background: #f5f5f0;
+  font-family: 'Courier Prime', monospace;
+}
+
+/* PAGE SHELL — 1050x475 bounding box, centered, 50px below */
+.page {
+  width: 1200px;
+  height: 600px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
-body {
-  background: var(--off-white);
-  font-family: 'Courier Prime', monospace;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-/* ── HEADER ── */
+/* HEADER */
 .header {
-  padding: 28px 44px 0;
   flex-shrink: 0;
   user-select: none;
   pointer-events: none;
+  padding-bottom: 16px;
 }
 
 .header h1 {
-  font-size: clamp(14px, 1.8vw, 24px);
+  font-size: 40px;
   font-weight: 400;
-  line-height: 1.4;
-  color: var(--gray-mid);
+  line-height: 1.25;
+  color: #000000;
 }
 
 .header h1 .red {
-  color: var(--red);
+  color: #E50914;
   font-weight: 700;
 }
 
-/* ── TIMELINE WRAPPER ── */
+/* TIMELINE WRAPPER — fills remaining height, pins content to bottom */
 .timeline-wrap {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 0 20px 24px;
   min-height: 0;
+  padding-bottom: 4px;
 }
 
-/* ── 13-COLUMN GRID ── */
+/* 13-COLUMN GRID */
 .grid-13 {
   display: grid;
-  grid-template-columns: repeat(var(--col-count), 1fr);
+  grid-template-columns: repeat(13, 1fr);
   width: 100%;
 }
 
-/* ── COVER STACKS ── */
+/* COVER STACKS */
 .col-covers {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
-  gap: 5px;
-  padding-bottom: 6px;
+  gap: 4px;
+  padding-bottom: 10px;
 }
 
-/* ── SINGLE COVER ── */
+/* SINGLE COVER */
 .doc-cover {
-  width: var(--cw, 50px);
-  height: var(--ch, 72px);
-  border-radius: 3px;
-  background: linear-gradient(145deg, #252525 0%, #111 100%);
+  width: 38px;
+  height: 54px;
+  border-radius: 2px;
+  background: linear-gradient(145deg, #252525 0%, #111111 100%);
   flex-shrink: 0;
   cursor: pointer;
   position: relative;
@@ -87,7 +80,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.28);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -105,8 +98,8 @@ body {
 
 .doc-cover .n {
   font-weight: 700;
-  color: var(--red);
-  font-size: 12px;
+  color: #E50914;
+  font-size: 9px;
   position: relative;
   z-index: 1;
 }
@@ -117,19 +110,19 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .doc-cover:hover {
-  transform: scale(1.24) translateY(-7px);
-  box-shadow: 0 0 0 2.5px var(--red), 0 10px 28px rgba(229, 9, 20, 0.25);
+  transform: scale(1.28) translateY(-6px);
+  box-shadow: 0 0 0 2px #E50914, 0 8px 22px rgba(229, 9, 20, 0.28);
   z-index: 800;
 }
 
-/* ── RAIL ROW ── */
+/* RAIL ROW */
 .row-rail {
   position: relative;
-  height: 20px;
+  height: 16px;
 }
 
 .rail-line {
@@ -137,8 +130,8 @@ body {
   top: 50%;
   left: 0;
   right: 0;
-  height: 2px;
-  background: var(--black);
+  height: 1.5px;
+  background: #0a0a0a;
   transform: translateY(-50%);
   z-index: 0;
 }
@@ -147,16 +140,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 20px;
+  height: 16px;
   position: relative;
   z-index: 1;
 }
 
 .dot {
-  width: 13px;
-  height: 13px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  background: var(--black);
+  background: #0a0a0a;
   transition: all 0.18s ease;
   flex-shrink: 0;
 }
@@ -166,34 +159,34 @@ body {
 }
 
 .dot.empty {
-  background: var(--gray-mid);
+  background: #aaaaaa;
   cursor: default;
 }
 
 .dot.clickable:hover {
-  width: 18px;
-  height: 18px;
-  background: var(--red);
+  width: 13px;
+  height: 13px;
+  background: #E50914;
   box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.18);
 }
 
-/* ── MONTH LABELS ── */
+/* MONTH LABELS */
 .col-label {
   text-align: center;
-  padding-top: 8px;
-  font-size: clamp(7.5px, 0.7vw, 10.5px);
-  color: var(--gray-dark);
+  padding-top: 6px;
+  font-size: 15px;
+  color: #555555;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .col-label b {
   display: block;
-  color: var(--black);
+  color: #0a0a0a;
 }
 
-/* ── OVERLAY BACKDROP ── */
+/* OVERLAY BACKDROP */
 .ov-bg {
   position: fixed;
   inset: 0;
@@ -213,7 +206,7 @@ body {
   pointer-events: all;
 }
 
-/* ── OVERLAY SHELL (card + arrows) ── */
+/* OVERLAY SHELL */
 .ov-shell {
   display: flex;
   align-items: center;
@@ -221,12 +214,12 @@ body {
   position: relative;
 }
 
-/* ── OVERLAY ARROWS ── */
+/* OVERLAY ARROWS */
 .ov-arrow {
   background: none;
   border: none;
   font-size: 44px;
-  color: var(--off-white);
+  color: #f5f5f0;
   cursor: pointer;
   line-height: 1;
   padding: 6px;
@@ -236,7 +229,7 @@ body {
 }
 
 .ov-arrow:hover {
-  color: var(--red);
+  color: #E50914;
 }
 
 .ov-arrow:disabled {
@@ -244,12 +237,12 @@ body {
   pointer-events: none;
 }
 
-/* ── OVERLAY CARD ── */
+/* OVERLAY CARD */
 .ov-card {
-  background: #fff;
-  border-radius: 18px;
-  padding: 26px 24px 20px;
-  width: 300px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px 30px 26px;
+  width: 380px;
   position: relative;
   transform: scale(0.9) translateY(14px);
   transition: transform 0.26s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -260,7 +253,7 @@ body {
   transform: scale(1) translateY(0);
 }
 
-/* ── OVERLAY CLOSE BUTTON ── */
+/* OVERLAY CLOSE BUTTON */
 .ov-x {
   position: absolute;
   top: 11px;
@@ -268,8 +261,8 @@ body {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: var(--black);
-  color: #fff;
+  background: #0a0a0a;
+  color: #ffffff;
   border: none;
   cursor: pointer;
   font-size: 13px;
@@ -281,10 +274,10 @@ body {
 }
 
 .ov-x:hover {
-  background: var(--red);
+  background: #E50914;
 }
 
-/* ── OVERLAY IMAGE ── */
+/* OVERLAY IMAGE */
 .ov-img {
   display: flex;
   justify-content: center;
@@ -292,10 +285,10 @@ body {
 }
 
 .ov-ph {
-  width: 150px;
-  height: 222px;
-  border-radius: 6px;
-  background: linear-gradient(145deg, #222, #111);
+  width: 200px;
+  height: 296px;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #222222, #111111);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -303,8 +296,8 @@ body {
   position: relative;
   overflow: hidden;
   font-weight: 700;
-  color: var(--red);
-  font-size: 18px;
+  color: #E50914;
+  font-size: 22px;
 }
 
 .ov-ph::before {
@@ -323,15 +316,15 @@ body {
 }
 
 .ov-img img {
-  width: 150px;
-  height: 222px;
-  border-radius: 6px;
+  width: 200px;
+  height: 296px;
+  border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.18);
   display: block;
 }
 
-/* ── OVERLAY TEXT CONTENT ── */
+/* OVERLAY TEXT */
 .ov-tags {
   display: flex;
   gap: 6px;
@@ -341,52 +334,52 @@ body {
 }
 
 .ov-tag {
-  font-size: 10px;
-  color: var(--red);
-  border: 1.5px solid var(--red);
+  font-size: 11px;
+  color: #E50914;
+  border: 1.5px solid #E50914;
   border-radius: 20px;
-  padding: 2px 10px;
+  padding: 3px 12px;
   text-transform: lowercase;
   letter-spacing: 0.03em;
 }
 
 .ov-title {
   font-weight: 700;
-  font-size: 14.5px;
+  font-size: 17px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   line-height: 1.2;
-  margin-bottom: 2px;
-}
-
-.ov-sub {
-  font-size: 10.5px;
-  text-align: center;
-  color: var(--gray-dark);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
   margin-bottom: 3px;
 }
 
-.ov-year {
-  font-size: 10.5px;
+.ov-sub {
+  font-size: 12px;
   text-align: center;
-  color: var(--gray-mid);
-  margin-bottom: 11px;
+  color: #555555;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.ov-year {
+  font-size: 12px;
+  text-align: center;
+  color: #aaaaaa;
+  margin-bottom: 13px;
 }
 
 .ov-desc {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.62;
-  color: var(--gray-dark);
+  color: #555555;
   text-align: center;
 }
 
 .ov-count {
-  font-size: 9px;
-  color: var(--gray-mid);
+  font-size: 10px;
+  color: #aaaaaa;
   text-align: center;
-  margin-top: 13px;
+  margin-top: 14px;
   letter-spacing: 0.08em;
 }
