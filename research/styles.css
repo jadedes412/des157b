@@ -8,6 +8,14 @@ body {
   overflow-x: hidden;
 }
 
+.feasibility {
+  background-color: #c6c38b;
+  padding: 30px;
+  margin: 10px;
+  color: #111111;
+  border-radius: 10px;
+}
+
 h1 {
     text-align: center;
 }
