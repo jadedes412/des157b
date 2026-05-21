@@ -1,0 +1,291 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+    :root {
+      --cream: #f5f0e8;
+      --warm-dark: #1c1a14;
+      --gold: #c9a84c;
+      --sage: #7a8c6e;
+      --blush: #e8d5c4;
+      --text: #2a2520;
+    }
+
+    html { 
+        scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      background: var(--cream);
+      color: var(--text);
+    }
+
+    /* ─── each section ─── */
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 40px;
+      position: relative;
+    }
+
+    /* ─── start ─── */
+    #start {
+      background: var(--warm-dark);
+      text-align: center;
+    }
+
+    #start h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      color: var(--cream);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+      line-height: 1.05;
+    }
+
+    #start p {
+      font-size: 1.1rem;
+      color: #a09880;
+      max-width: 480px;
+      line-height: 1.7;
+      margin-bottom: 56px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 36px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      background: transparent;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: var(--gold);
+      color: var(--warm-dark);
+    }
+
+    /* ─── data sections ─── */
+    .data-screen {
+      background: var(--cream);
+      text-align: center;
+      border-bottom: 1px solid #ddd8cc;
+    }
+
+    .data-screen:nth-child(even) {
+      background: var(--blush);
+    }
+
+    .data-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 40px;
+    }
+
+    .data-number {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(4rem, 12vw, 9rem);
+      color: var(--warm-dark);
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .data-then-now {
+      display: flex;
+      gap: 80px;
+      align-items: flex-end;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+
+    .data-then-now .then {
+      text-align: right;
+    }
+
+    .data-then-now .now {
+      text-align: left;
+    }
+
+    .data-then-now .num {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 1;
+    }
+
+    .data-then-now .then .num { color: #b0a898; }
+    .data-then-now .now .num { color: var(--warm-dark); }
+
+    .data-then-now .label {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      margin-top: 6px;
+    }
+
+    .divider {
+      font-size: 2rem;
+      color: var(--gold);
+      padding-bottom: 8px;
+    }
+
+    .data-description {
+      max-width: 560px;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #5a5040;
+      margin: 0 auto 48px;
+    }
+
+    /* ─── the user interaction ─── */
+    #user-turn {
+      background: var(--sage);
+      text-align: center;
+    }
+
+    #user-turn p {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.5rem, 4vw, 2.6rem);
+      color: var(--cream);
+      font-weight: 400;
+      max-width: 640px;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+
+    #user-turn p.sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: #d4e0cc;
+      font-weight: 300;
+      margin-bottom: 48px;
+    }
+
+    /* ─── question sections ─── */
+    .question-screen {
+      background: var(--cream);
+      border-bottom: 1px solid #ddd8cc;
+    }
+
+    .question-screen:nth-child(even) {
+      background: #eee8d8;
+    }
+
+    .q-number {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    .question-screen h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 400;
+      max-width: 600px;
+      line-height: 1.35;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .text-input-area {
+      width: 100%;
+      max-width: 600px;
+      min-height: 160px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #c0b8a8;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.8;
+      resize: none;
+      outline: none;
+      padding: 12px 0;
+      margin-bottom: 40px;
+    }
+
+    .text-input-area::placeholder {
+      color: #b8b0a0;
+      font-style: italic;
+    }
+
+    /* ─── ending section ─── */
+    #ending {
+      background: var(--warm-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 80px 40px;
+    }
+
+    #ending h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--cream);
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    #ending .sub {
+      font-size: 0.9rem;
+      color: #7a7060;
+      text-align: center;
+      margin-bottom: 64px;
+      letter-spacing: 0.05em;
+    }
+
+    .hope-field {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .hope-dot {
+      background: rgba(201, 168, 76, 0.15);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      border-radius: 100px;
+      padding: 10px 20px;
+      font-size: 0.85rem;
+      color: #c9b888;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+      max-width: 280px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .hope-dot:hover {
+      background: rgba(201, 168, 76, 0.25);
+      border-color: var(--gold);
+      color: var(--cream);
+    }
+
+    .hope-dot.yours {
+      background: rgba(201, 168, 76, 0.3);
+      border-color: var(--gold);
+      color: var(--cream);
+    }
