@@ -1,0 +1,14 @@
+/* reset all */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* body section style */
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
