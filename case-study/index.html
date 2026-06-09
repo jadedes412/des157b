@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>the next five: case study</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Londrina+Shadow&display=swap" rel="stylesheet">
+<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ─────────── HERO ─────────── -->
+  <section id="hero">
+    <img class="sprout" src="https://jadedes412.github.io/des157b/project/images/leaf-1.png" alt="a small leaf sprout">
+     <h1 class="display">THE NEXT<br>FIVE</h1>
+    <p class="hero-small">case study</p>
+    <p class="hero-sub">an interactive web experience about<br>imagining the futures we want.</p>
+    <span class="hero-meta">DES 157B · UC Davis Design</span>
+    <div class="hero-btns">
+      <a class="btn solid" href="https://jadedes412.github.io/des157b/project/index.html" target="_blank" rel="noopener">visit the live site ↗</a>
+      <a class="btn" href="#overview">read the case study ↓</a>
+    </div>
+  </section>
+
+  <!-- ─────────── OVERVIEW ─────────── -->
+  <section id="overview">
+    <div class="wrap reveal">
+      <p class="eyebrow">what this it?</p>
+      <h2 class="display sec-head">OVERVIEW</h2>
+      <p class="measure">Instead of only asking “what’s next,” this project speculates further out... five years from now, for yourself, your community, society, and the world. Imagining possible futures (the ones we want, and the dystopian ones we don’t) is one way being able to work through your own identity, values, and sense of purpose. Picturing where we might end up helps us decide what to do <em>now</em> to move toward those futures, or away from them.</p>
+
+      <h3>what it does</h3>
+      <p class="measure">The Next Five is a single, continuous scrolling experience. It opens with real data on how much has already changed between 2021 and 2026: how we connect, work, learn, and feel. Then it turns the question back on the visitor with three small prompts about the past, the present, and a hope for five years from now. That hope is “planted” as a flower in a shared <strong>Field of Hope</strong>, growing alongside everyone else’s answers.</p>
+
+      <div class="two-col">
+        <div class="panel green">
+          <span class="panel-topic">who it’s for</span>
+          <p style="margin:0">Graduating students and young adults standing at that “what’s next” edge — and really, anyone willing to sit with the future for a moment.</p>
+        </div>
+        <div class="panel green">
+          <span class="panel-topic">the goals</span>
+          <p style="margin:0">Make the anxiety feel less isolating, invite honest reflection on values, and turn a private worry into a collective, hopeful artifact.</p>
+        </div>
+      </div>
+
+      <p class="measure" style="margin-top:18px">The web is the right medium for this. Visitors explore the data and build their own narrative, then their answer becomes part of the data itself. Every new hope makes the field a little fuller for the next person.</p>
+
+
+  <!-- ─────────── UX RESEARCH ─────────── -->
+  <section id="research">
+    <div class="wrap reveal">
+      <p class="eyebrow">comparative research</p>
+      <h2 class="display sec-head">UX RESEARCH</h2>
+
+      <p class="lede measure">Before designing, I studied two existing “time capsule” web products to understand what makes a future-facing, reflective tool feel meaningful, and what makes it feel hollow.</p>
+
+      <div class="two-col">
+        <div class="panel">
+          <span class="panel-topic" style="border-color:var(--ink)">Virtual Time Capsule</span>
+          <small>vtcapsules.com</small>
+          <p style="margin:12px 0 0">Built around family and legacy, something passed down through generations. That generational handoff felt genuinely meaningful. But the experience read like it was <em>selling a service</em>: another subscription, an exchange. I wanted my project to feel human and personal, not transactional.</p>
+        </div>
+        <div class="panel">
+          <span class="panel-topic" style="border-color:var(--ink)">The Time Capsule</span>
+          <small>app.thetimecapsule.org</small>
+          <p style="margin:12px 0 0">More social and interactive, a public calendar of openings and a community feed that made the site feel alive. The interface was friendly and intuitive. But it leaned on attention-grabbing, social-media patterns, and capsules were so quick to make that they lost their weight. Creating one felt like filling out a form.</p>
+        </div>
+      </div>
+
+      <div class="figure green">
+        <img src="images/comp-analysis.png" alt="Comparative analysis of existing time capsule products">
+        <p class="figcap"><b>Comparative analysis.</b> Studying existing products side by side to find the gap my project should fill.</p>
+      </div>
+
+      <h3>how it changed the project</h3>
+      <p class="measure">These two examples pulled me in opposite directions, and the gap between them became my brief. I didn’t want the cold subscription feel of the first or the disposable social-feed feel of the second.</p>
+      <p class="measure">The most useful insight came from that “just a form” moment: if creating something meaningful feels like paperwork, the meaning evaporates. So I rebuilt the experience around <strong>guiding questions</strong> instead of blank fields, paced one prompt at a time, and wrapped it in data and a shared field so a single answer feels part of something larger. The goal shifted from “store a message” to “have a small, honest moment with the future.”</p>
+
+      <div class="figure">
+        <img src="images/bibliography.png" alt="Annotated bibliography of research sources">
+        <p class="figcap"><b>Annotated bibliography.</b> The sources behind the project’s framing and the data shown in the “changed” section.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── VISUAL DESIGN ─────────── -->
+  <section id="visual">
+    <div class="wrap reveal">
+      <p class="eyebrow">look &amp; feel</p>
+      <h2 class="display sec-head">VISUAL DESIGN</h2>
+
+      <h3>color</h3>
+      <div class="swatches">
+        <div class="swatch"><div class="chip" style="background:#36a647"></div><span class="hex">#36a647</span>green</div>
+        <div class="swatch"><div class="chip" style="background:#6dc77b"></div><span class="hex">#6dc77b</span>green soft</div>
+        <div class="swatch"><div class="chip" style="background:#eaf7ec"></div><span class="hex">#eaf7ec</span>green faint</div>
+        <div class="swatch"><div class="chip" style="background:#1c1c1c"></div><span class="hex">#1c1c1c</span>ink</div>
+        <div class="swatch"><div class="chip" style="background:#ffffff"></div><span class="hex">#ffffff</span>paper</div>
+      </div>
+      <p class="measure">I chose a single, confident green on a clean white “paper” background. Green carries growth, hope, and nature: it ties directly to the flowers and the sprout, and it’s the emotional opposite of the cold, corporate feel I found in my research. The white paper keeps everything calm and personal rather than busy or salesy. Almost nothing is filled; the green lives in outlines and shadows, which keeps the page feeling light and hand-made.</p>
+
+      <h3>typography</h3>
+      <div class="specimen">
+        <div class="big">FIVE · CHANGED · YOU · HOPE</div>
+        <div class="body-ex">a lot can change in five years — more than we may notice when it’s happening.</div>
+      </div>
+      <p class="measure">Everything is set in <strong>Londrina Solid</strong>. Its slightly irregular, hand-drawn weight makes the interface feel made by a person. The big section words use a white fill with a heavy ink outline and a hard offset shadow, like a sticker or a poster, so each turn of the story lands with a beat.</p>
+
+      <h3>the sprout, and how the look evolved</h3>
+      <p class="measure">A small leaf sprout appears throughout and gently floats a tiny character growing alongside the visitor. What you can’t see from the finished site is how much the visual language shifted through feedback:</p>
+      <div class="two-col">
+        <div class="panel green">
+          <span class="panel-topic">field of hope</span>
+          <p style="margin:0">An early version <em>hid</em> flowers that didn’t match a filter and used a soft glow to mark your own. Testers found the disappearing flowers confusing. Now every hope stays visible (filtering only outlines the matches) and your own flower gets a clean green outline instead of a glow.</p>
+        </div>
+        <div class="panel green">
+          <span class="panel-topic">data cards</span>
+          <p style="margin:0">The stats were first stacked in one block. I restructured each card so the year sits above the big number and the meaning sits below it, giving every statistic a single, obvious reading order.</p>
+        </div>
+      </div>
+
+      <h3>from sketch to screen</h3>
+      <p class="measure">The look didn’t arrive all at once. It moved from rough sketches, to low-fidelity wireframes, to the finished green-outline system to optimize layout, hierarchy, and tone.</p>
+
+      <div class="fig-two">
+        <div class="figure">
+          <img src="images/sketches.png" alt="Early hand sketches of the project">
+          <p class="figcap"><b>Sketches.</b> First rough passes at structure and flow.</p>
+        </div>
+        <div class="figure">
+          <img src="images/lofi.png" alt="Low-fidelity wireframes">
+          <p class="figcap"><b>Lo-fi wireframes.</b> Blocking out each section before any styling.</p>
+        </div>
+      </div>
+
+      <div class="figure green">
+        <img src="images/design-progress.png" alt="Design progress showing the visual system developing">
+        <p class="figcap"><b>Design progress.</b> The palette, type, and components settling into the final hand-drawn system.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── USER INTERFACE ─────────── -->
+  <section id="ui">
+    <div class="wrap reveal">
+      <p class="eyebrow">patterns &amp; flow</p>
+      <h2 class="display sec-head">USER INTERFACE</h2>
+
+      <p class="lede measure">The experience is one continuous vertical story, so navigation maps directly to meaning: a down arrow (↓) always moves you forward through the narrative, while side arrows (← →) browse within a set.</p>
+
+      <div class="figure green">
+        <img src="images/user-flow.png" alt="User flow diagram for the experience">
+        <p class="figcap"><b>User flow.</b> The single linear path from the opening data, through the three questions, to planting a hope in the field.</p>
+      </div>
+
+      <div class="screens">
+        <div class="screen">
+          <span class="panel-topic" style="font-size:1.2rem;padding:6px 16px">how we connect</span>
+          <div class="mini-then-now">
+            <div class="mini-box"><div class="mini-year">2021</div><div class="mini-num">3.8B</div><div class="mini-label">social media users</div></div>
+            <div class="mini-arrow">→</div>
+            <div class="mini-box now"><div class="mini-year">2026</div><div class="mini-num">5.2B</div><div class="mini-label">social media users</div></div>
+          </div>
+          <p class="cap">Arrow-and-dot carousel — one stat at a time, dots show where you are.</p>
+        </div>
+
+        <div class="screen">
+          <div class="mini-q-top">
+            <img class="sprout" src="https://jadedes412.github.io/des157b/project/images/leaf-3.png" alt="">
+            <div>
+              <p class="mini-q-label">looking forward, five years from now…</p>
+              <p class="mini-q-text">what’s one thing you hope is true by then?</p>
+            </div>
+          </div>
+          <div class="mini-input">my hope is…</div>
+          <div class="mini-q-foot"><span class="n">3/3</span><span class="pill-arrow">plant my hope ↓</span></div>
+          <p class="cap">One question on screen at a time, in a horizontal slider.</p>
+        </div>
+      </div>
+
+      <div class="screen" style="margin-top:6px">
+        <span class="counter">∴ 18 hopes growing</span>
+        <div class="mini-filter">
+          <span class="fpill active">all</span>
+          <span class="fpill">people &amp; love</span>
+          <span class="fpill">the world &amp; planet</span>
+          <span class="fpill">the self &amp; growth</span>
+        </div>
+        <div class="mini-field">
+          <img src="https://jadedes412.github.io/des157b/project/images/self+growth.png" style="left:8%;top:30%" alt="">
+          <img src="https://jadedes412.github.io/des157b/project/images/ppl+love.png" style="left:24%;top:62%" alt="">
+          <img src="https://jadedes412.github.io/des157b/project/images/world+planet.png" style="left:40%;top:24%" alt="">
+          <img src="https://jadedes412.github.io/des157b/project/images/society.png" style="left:55%;top:58%" alt="">
+          <img src="https://jadedes412.github.io/des157b/project/images/tech+future.png" style="left:70%;top:34%" alt="">
+          <img src="https://jadedes412.github.io/des157b/project/images/peace+unk.png" style="left:84%;top:64%" alt="">
+          <img src="https://jadedes412.github.io/des157b/project/images/self+growth.png" style="left:48%;top:80%" alt="">
+        </div>
+        <p class="cap">The shared Field of Hope (click any flower for its hope and category; filter pills outline a theme.)</p>
+      </div>
+
+      <h3>designing for cognitive load</h3>
+      <p class="measure">Reducing cognitive load drove most of these calls. One question on screen at a time, short prompts, and placeholders like “even a feeling or single word is enough” lower the pressure to perform. The arrow carousel replaced a draggable rail that testers didn’t realize they could touch.</p>
+
+      <h3>Don Norman’s principles in practice</h3>
+      <div class="two-col">
+        <div class="panel green"><span class="panel-topic">affordance</span><p style="margin:0">Pill buttons and round arrows clearly look pressable.</p></div>
+        <div class="panel green"><span class="panel-topic">feedback</span><p style="margin:0">Selecting a flower fills it green; planting a hope bumps the live counter and auto-opens your flower’s tooltip.</p></div>
+        <div class="panel green"><span class="panel-topic">mapping</span><p style="margin:0">↓ moves down the page; ← → move through cards. Direction matches meaning.</p></div>
+        <div class="panel green"><span class="panel-topic">consistency</span><p style="margin:0">The same green-outline language repeats from the first button to the last flower.</p></div>
+      </div>
+
+      <h3>example tasks</h3>
+      <ul class="tasks">
+        <li><b>See how life changed.</b> Click through the 2021 → 2026 stats on connection, work, learning, and hope.</li>
+        <li><b>Reflect.</b> Answer three small prompts about the past, the present, and a hope for five years out.</li>
+        <li><b>Plant a hope.</b> Pick a category and add your hope as a flower to the shared field.</li>
+        <li><b>Explore the field.</b> Browse everyone’s hopes and filter the meadow by theme.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ─────────── REVISIONS ─────────── -->
+  <section id="revisions">
+    <div class="wrap reveal">
+      <p class="eyebrow">testing &amp; iteration</p>
+      <h2 class="display sec-head">REVISIONS</h2>
+
+      <p class="lede measure">User testing reshaped the project more than any other phase. A few clear patterns emerged, and each one became a change.</p>
+
+      <div class="figure green">
+        <img src="images/usability.png" alt="Usability testing results">
+        <p class="figcap"><b>Usability testing.</b> Watching real people move through the prototype surfaced the friction points below.</p>
+      </div>
+
+      <ol class="rev">
+        <li>Testers tried to read the data cards but didn’t realize the rail could be dragged. <strong>Fix:</strong> replaced the drag interaction with explicit arrow buttons and clickable dots.</li>
+        <li>The “YOU” moment felt off-center and a little disorienting, and jumping between separate question pages broke the mood. <strong>Fix:</strong> centered the section and moved the three questions into one sliding card so the page never lurches.</li>
+        <li>In the field, people weren’t sure which flower was theirs or what each one meant. <strong>Fix:</strong> added click tooltips, a clean outline on your own hope, and a running “hopes growing” counter so the field feels alive.</li>
+        <li>The stats were hard to parse at a glance. <strong>Fix:</strong> gave each card a strict order — year, then number, then meaning.</li>
+      </ol>
+
+      <h3>version 1 → version 2</h3>
+      <p class="measure">Those findings are the difference between the two builds. Version 1 proved the concept; Version 2 is the calmer, clearer result of testing.</p>
+
+      <div class="fig-two">
+        <div class="figure">
+          <img src="images/version-1.png" alt="Version 1 of the project">
+          <p class="figcap"><b>Version 1.</b> The first working build, before usability testing.</p>
+        </div>
+        <div class="figure green">
+          <img src="images/version-2.png" alt="Version 2 of the project">
+          <p class="figcap"><b>Version 2.</b> Refined navigation, clearer hierarchy, and the redesigned field.</p>
+        </div>
+      </div>
+
+      <h3>what i’d do next</h3>
+      <p class="measure">If I kept developing The Next Five, I’d source and cite the data more rigorously, let people return to their own hope over time (leaning into the real time-capsule idea), add gentler motion and richer interactions to the field.</p>
+    </div>
+  </section>
+
+  <!-- ─────────── SUMMARY ─────────── -->
+  <section id="summary">
+    <div class="wrap reveal">
+      <p class="eyebrow">reflection</p>
+      <h2 class="display sec-head">SUMMARY</h2>
+
+      <div class="summary-grid">
+        <div class="sum-card">
+          <div class="k">what i learned</div>
+          <p style="margin:0">Meaning in a digital experience comes from pacing and restraint, not features. The difference between “a form” and “a moment” was mostly about asking one good question at a time and giving each answer somewhere to live.</p>
+        </div>
+        <div class="sum-card">
+          <div class="k">most proud of</div>
+          <p style="margin:0">The Field of Hope. Watching private answers become a shared meadow. and seeing your own flower outlined among strangers’, captures the whole point of the project in a single screen.</p>
+        </div>
+        <div class="sum-card">
+          <div class="k">most challenging</div>
+          <p style="margin:0">Getting the data, the questions, and the field to feel like one calm story instead of three separate widgets — and untangling the interactions (drag vs. arrows, hide vs. highlight) until they felt obvious.</p>
+        </div>
+        <div class="sum-card">
+          <div class="k">most rewarding</div>
+          <p style="margin:0">Testers who paused on the last question. When someone slowed down to actually think about what they hope is true in five years, the project was doing exactly what it set out to do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <img class="sprout" src="https://jadedes412.github.io/des157b/project/images/leaf-3.png" alt="">
+    <p>thank you for reading.</p>
+    <p><a href="https://jadedes412.github.io/des157b/project/index.html" target="_blank" rel="noopener">visit the live project ↗</a></p>
+    <p style="margin-top:10px">the next five · DES 157B · UC Davis Design</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

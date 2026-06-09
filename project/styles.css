@@ -118,18 +118,18 @@ p { margin: 0; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 80px 24px;
+  padding: 28px 24px;
 }
 .data-eyebrow {
   font-weight: 300;
-  font-size: 1.7rem;
+  font-size: 1.45rem;
   color: var(--ink-soft);
   line-height: 1.4;
   max-width: 720px;
 }
 .data-headline {
-  font-size: 6.5rem;
-  margin: 6px 0 40px;
+  font-size: 5rem;
+  margin: 4px 0 18px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,16 +151,16 @@ p { margin: 0; }
   background: #fff;
   border: 3px solid var(--ink);
   border-radius: var(--radius);
-  padding: 44px 56px 52px;
+  padding: 26px 50px 30px;
   text-align: left;
 }
 .card-topic {
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   border: 3px solid var(--green);
   border-radius: 16px;
   padding: 12px 28px;
-  margin-bottom: 36px;
+  margin-bottom: 16px;
   text-align: center;
 }
 .data-then-now {
@@ -168,7 +168,7 @@ p { margin: 0; }
   align-items: center;
   justify-content: center;
   gap: 28px;
-  margin-bottom: 36px;
+  margin-bottom: 18px;
 }
 .then, .now {
   flex: 1;
@@ -177,7 +177,7 @@ p { margin: 0; }
   align-items: center;
   border: 3px solid var(--ink-faint);
   border-radius: 18px;
-  padding: 28px 20px;
+  padding: 16px 18px;
   text-align: center;
 }
 .now { border-color: var(--green); }
@@ -193,7 +193,7 @@ p { margin: 0; }
 .num {
   font-family: 'Londrina Solid', sans-serif;
   font-weight: 900;
-  font-size: 5rem;
+  font-size: 4.2rem;
   color: #fff;
   -webkit-text-stroke: 2.5px var(--ink-faint);
   line-height: 1;
@@ -213,7 +213,7 @@ p { margin: 0; }
 }
 .data-description {
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.5;
   color: var(--ink);
   text-align: center;
@@ -224,7 +224,7 @@ p { margin: 0; }
   display: flex;
   align-items: center;
   gap: 28px;
-  margin-top: 34px;
+  margin-top: 16px;
 }
 .card-arrow {
   font-family: 'Londrina Solid', sans-serif;
@@ -495,7 +495,7 @@ p { margin: 0; }
   width: 100%;
   max-width: 1080px;
   min-height: 54vh;
-  margin: 16px auto 48px;
+  margin: 56px auto 48px;
   padding: 0 24px;
   background: var(--paper);
 }

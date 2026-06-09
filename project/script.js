@@ -124,6 +124,11 @@ document.querySelectorAll(".flower-item").forEach(function (item) {
     });
 });
 
+//  plant my hope button
+
+var submitBtn = document.getElementById("submit-btn");
+if (submitBtn) submitBtn.addEventListener("click", submitHope);
+
 
 //  load hopes from Back4App
 
@@ -288,9 +293,13 @@ function submitHope() {
     }
     var flower = selectedFlower || guessCategory(text);
 
+    // plant it locally for instant feedback
     allHopes.unshift({ text: text, flower: flower, yours: true });
     updateCounter();
     renderHopes();
+
+    // save it to Back4App so the next visitor sees it
+    saveHope(text, flower);
 
     // pop open the user's own flower once the field is on screen
     setTimeout(function () {
@@ -304,35 +313,29 @@ function submitHope() {
 }
 
 
-//  restart entire experience (reset sliders, inputs, selections)
+//  restart entire experience
+//  a full reload re-pulls every saved hope from Back4App, so previous
+//  users' flowers (and the one just planted) stay in the field
 
 var restartBtn = document.getElementById("restart-btn");
 if (restartBtn) {
-    restartBtn.addEventListener("click", function () {
-        // reset both sliders
-        goToCard(0);
-        goToQuestion(0);
-
-        // clear form
-        ["ans1", "ans2", "ans3"].forEach(function (id) {
-            var el = document.getElementById(id);
-            if (el) el.value = "";
-        });
-        document.querySelectorAll(".flower-item").forEach(function (c) { c.classList.remove("selected"); });
-        selectedFlower = null;
-
-        // reset the filter back to "all"
-        activeFilter = "all";
-        document.querySelectorAll(".filter-btn").forEach(function (b) {
-            b.classList.toggle("active", b.dataset.filter === "all");
-        });
-
-        // pull the user's planted hope(s) back out of the field
-        allHopes = allHopes.filter(function (h) { return !h.yours; });
-        updateCounter();
-        renderHopes();
+    restartBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        location.reload();
     });
 }
+
+//  on refresh/reload, always begin from the very start of the experience
+//  (the field itself is restored from Back4App, so saved flowers remain)
+
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+window.addEventListener("load", function () {
+    window.scrollTo(0, 0);
+    ["ans1", "ans2", "ans3"].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.value = "";
+    });
+});
 
 //  category filter buttons
 
@@ -347,7 +350,7 @@ document.querySelectorAll(".filter-btn").forEach(function (btn) {
 
 //  function for guess category from text keywords COOL
 
-function guessCategory(text) {
+/* function guessCategory(text) {
     var t = text.toLowerCase();
     if (/family|daughter|son|parent|friend|love|together|people|belong|trust|kind|lonely/.test(t)) return "people";
     if (/planet|ocean|air|earth|climate|city|world|nature|clean|green|environment/.test(t))        return "world";
@@ -355,7 +358,7 @@ function guessCategory(text) {
     if (/equal|justice|care|education|trust|honest|fair|society/.test(t))                           return "society";
     if (/tech|ai|robot|digital|future|innov|internet|machine/.test(t))                              return "tech";
     return "peace";
-}
+}*/
 
 
 })()
